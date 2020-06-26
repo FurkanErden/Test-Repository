@@ -14,6 +14,6 @@ node('dockerclusterserver_label') {
 
     stage 'Build'
         sh 'python3 --version'
-        //sh 'docker build -t test/test:latest -f Dockerfile .'
-        //sh 'docker push test/test:latest'
+        //sh 'docker build -t FurkanErden/Test-Repository:latest -f Dockerfile .'
+        //sh 'docker push FurkanErden/Test-Repository:latest'
 }

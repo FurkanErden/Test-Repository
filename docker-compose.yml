@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+  sdkworkerapp:
+    # image: inccrea/ma_sdk_intel_worker:latest
+    image: test-repository
+    networks:
+      - overlay
+    environment:
+      - name={{.Service.Name}}
+      - rep_id={{.Task.Slot}}
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+        window: 60s
+      endpoint_mode: vip
+
+networks:
+  overlay:
