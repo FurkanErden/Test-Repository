@@ -13,7 +13,7 @@ node('dockerclusterserver_label') {
         checkout scm
 
     stage 'Build'
-        sh 'python --version'
+        sh 'python3 --version'
         //sh 'docker build -t test/test:latest -f Dockerfile .'
         //sh 'docker push test/test:latest'
 }
