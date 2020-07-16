@@ -8,7 +8,7 @@
         }
     }
 }*/
-node('dockerclusterserver_label') {
+node('test_dockerserver_label') {
     stage 'Checkout'
         checkout scm
 
